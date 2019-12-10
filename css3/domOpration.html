@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>domOpration</title>
+    <style>
+        #demo {
+            width: 0;
+            height: 0;
+            border-width: 20px;
+            border-style: solid;
+            border-color: transparent red red transparent;
+        }
+    </style>
+</head>
+<body name="body">
+<div id ="demo"></div>
+<h1></h1>
+ <script type="text/javascript">
+     let fragment = document.createDocumentFragment()
+     console.log(fragment)
+     fragment.appendChild(document.createElement('p'))
+     console.log(fragment)
+     fragment.appendChild(document.createTextNode('123'))
+     console.log(fragment)
+     let body = document.getElementsByTagName('body')[0]
+     console.log(body)
+     console.log(body.firstElementChild)
+     console.log(body.firstElementChild.nextElementSibling)
+     console.log(body.lastElementChild)
+     console.log(body.lastElementChild.previousElementSibling)
+     console.log(body.lastElementChild.parentElement)
+     body.lastElementChild.parentElement.insertBefore(fragment, body.firstElementChild)
+ </script>
+</body>
+</html>

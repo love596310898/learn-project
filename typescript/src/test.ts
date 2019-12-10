@@ -1,0 +1,5 @@
+export let obj = {
+  x: 1,
+  y: 2
+}
+

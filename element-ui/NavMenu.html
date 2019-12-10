@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NavMenu-test</title>
+    <link href="https://cdn.bootcss.com/element-ui/2.12.0/theme-chalk/index.css" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+    <el-menu
+            default-active="1"
+            class="el-menu-vertical-demo"
+            @open="handleOpen"
+            @close="handleClose"
+            background-color="#F5F5F5"
+            text-color="#333333"
+            active-text-color="#ffd04b">
+        <el-menu-item index="1">
+            <i class="el-icon-location"></i>
+            <span>导航一</span>
+        </el-menu-item>
+        <el-menu-item index="2">
+            <i class="el-icon-location"></i>
+            <span>导航一</span>
+        </el-menu-item>
+        <el-menu-item index="3">
+            <i class="el-icon-location"></i>
+            <span>导航一</span>
+        </el-menu-item>
+    </el-menu>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/element-ui/2.12.0/index.js"></script>
+<script type="text/javascript">
+    new Vue({
+        el: '#app',
+        data: function () {
+            return {visible: false}
+        },
+        methods: {
+            handleOpen(key, keyPath) {
+                console.log(key, keyPath);
+            },
+            handleClose(key, keyPath) {
+                console.log(key, keyPath);
+            }
+        }
+    })
+</script>
+</body>
+</html>

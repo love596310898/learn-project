@@ -1,0 +1,16 @@
+{
+  "name": "typescriptSdudens",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack --config ./config/build.config.js --progress"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "babel-loader": "^8.0.6",
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^6.1.0",
+    "typescript": "^3.6.3"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "learn project",
+  "version": "1.0.0",
+  "description": "node-learn-some-module",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "assert": "^2.0.0",
+    "node": "^13.3.0",
+    "thunkify": "^2.1.2"
+  }
+}
