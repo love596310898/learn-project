@@ -5,11 +5,22 @@ import mutations from "./mutations";
 Vue.use(Vuex)
 
 const state = {
-    message: 'hello world 1'
+    message: 'hello world 1',
+    count: 1,
+    email: '596310898@163.com'
+}
+const getters = {
+    incrementCount(state){
+      return ++state.count
+    },
+    jianCount(state, getters){
+      return getters.incrementCount - 1 + ''
+    }
 }
 
 const store = new Vuex.Store({
     state,
+    getters,
     mutations,
 })
 
