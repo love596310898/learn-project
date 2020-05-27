@@ -1,4 +1,6 @@
-class Stake {
+const LinkedList = require('./linkedList')
+
+class StakeByArray {
   constructor(...item) {
     this.iSreverse = false
     this.stake = [...item]
@@ -18,13 +20,30 @@ class Stake {
   }
 }
 
-const item = [1, 2, 3]
-const stake = new Stake(...item)
-stake.push(...item)
-stake.pop()
-console.log(stake)
+class StakeByLinkedList {
+  constructor() {
+    this.iSreverse = false
+    this.stake = new LinkedList()
+  }
+  push(...item) {
+    item.forEach(i => {
+      this.iSreverse
+        ? this.stake.addTail(i)
+        : this.stake.addHead(i)
+    })
+    return item
+  }
+  pop() {
+    return this.iSreverse
+      ? this.stake.removeTail()
+      : this.stake.removeHead()
+  }
+  reverse() {
+    this.iSreverse = !this.iSreverse
+  }
+}
 
-stake.reverse()
-stake.pop()
-stake.pop()
-console.log(stake)
+const testStake = new StakeByLinkedList()
+testStake.push(1, 2, 3)
+testStake.reverse()
+console.log(testStake.pop())

@@ -1,7 +1,8 @@
-class Quequ {
-  constructor(...item) {
+const LinkedList = require('./linkedList')
+class QuequByArray {
+  constructor() {
     this.isReverse = false
-    this.quequ = [...item]
+    this.quequ = []
   }
   push(...item){
     return this.isReverse
@@ -18,13 +19,29 @@ class Quequ {
   }
 }
 
-const item = [1, 2, 3]
-const quequ = new Quequ(...item)
-quequ.push(...item)
-quequ.pop()
-console.log(quequ)
+class quequByLinkedList {
+  constructor(...item) {
+    this.isReverse = false
+    this.quequ = new LinkedList()
+  }
+  push(...item) {
+    item.forEach(i => {
+      if (this.isReverse) this.quequ.addTail(i)
+      else this.quequ.addHead(i)
+    })
+    return item
+  }
+  pop() {
+    return this.isReverse
+      ? this.quequ.removeHead()
+      : this.quequ.removeTail()
+  }
+  reverse() {
+    this.isReverse = !this.isReverse
+  }
+}
 
-quequ.reverse()
-quequ.pop()
-quequ.pop()
-console.log(quequ)
+const testQuequ = new quequByLinkedList()
+testQuequ.reverse()
+testQuequ.push(1, 2, 3)
+console.log(testQuequ.quequ)
