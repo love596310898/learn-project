@@ -1,4 +1,8 @@
 // first method
+/**
+ * 
+ * @param {Number} n 第几位斐波那契数 
+ */
 function fib1(n) {
   if (typeof n !== 'number' || n < 1) {
     throw new TypeError('fibonacci: argument "n" expect a "number" gt(>) zero')

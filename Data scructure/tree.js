@@ -1,3 +1,6 @@
+/**
+ * 二分查找树
+ */
 class Tree {
   constructor(value) {
     this.value = value
