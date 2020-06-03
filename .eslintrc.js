@@ -19,8 +19,8 @@ module.exports = {
   rules: {
     // https://eslint.org/docs/rules/
     // https://eslint.org/docs/user-guide/configuring#extending-configuration-files
-    'no-console': NODE_ENV === NODE_ENV_PROD ? 'warn' : 'off',
-    'no-debugger': NODE_ENV === NODE_ENV_PROD ? 'warn' : 'off',
+    // 'no-console': NODE_ENV === NODE_ENV_PROD ? 'warn' : 'off',
+    // 'no-debugger': NODE_ENV === NODE_ENV_PROD ? 'warn' : 'off',
     'max-len': ['error', 200],
     'consistent-return': ['off'],
     'import/extensions': ['off'],
