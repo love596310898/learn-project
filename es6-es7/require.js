@@ -1,3 +1,3 @@
-let obj = require('./exports')
-//bj()
-console.log(obj)
+const obj = require('./exports');
+// bj()
+global.console.log(obj);
