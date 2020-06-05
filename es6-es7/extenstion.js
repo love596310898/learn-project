@@ -19,7 +19,7 @@ function Persion(name, age) {
   this.age = age;
 }
 global.console.log(new Persion('baimei', 99));
-/*  借用继承  */
+/*  借用构造函数 */
 /**
  * 通过借用构造函数实现了属性与方法的继承
  * 节省了代码量 同样没有抽离出共同的属性与方法以节省内存
@@ -54,3 +54,29 @@ function parasitism(ParrentClass) {
   return new F();
 }
 global.console.log(parasitism(Borrow).address);
+/* 优化寄生模式 配合原型模式  借用构造函数 实现的组合继承*/
+/**
+ * 类似Object.create()方法实现 实现对象间的继承
+ * 利用继承增强过的对象作为子类的原型
+ * 解决两次调用父类构造函数问题 接具实例属性与原型属性重复问题
+ * 借用构造函数实现属性继承， 利用原型模式实现方法继承  
+ * 利用寄生模式 解决继承两次调用父类导致的实例与原型中属性重复问题
+ * 不影响 instance 操作符检测结果
+ * 不影响 isPrototypeOf 检测结果
+ */
+function createPrototype(target) {
+  function F(){}
+  F.prototype = target
+  return new F()
+}
+let prototype = Object.create &&  Object.create(Prototype.prototype) || createPrototype(Prototype.prototype)
+function OptimizeParasitism(...args) {
+  Prototype.apply(this, [...args])
+  this.isOwnHouse = true
+}
+prototype.constructor = OptimizeParasitism
+OptimizeParasitism.prototype = prototype
+const obj = new OptimizeParasitism('baimei', 99, 'beijin')
+global.console.log(obj);
+
+
