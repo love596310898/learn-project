@@ -1,54 +1,56 @@
 /* 工厂模式 */
 /**
- * @param {Number} x
- * @param {Number} y
+ * 快速批量生成对象，没有抽象出事务的类别
  */
-// function m2(x, y) {
-//   return {
-//     x: x * x,
-//     y: y * y,
-//   };
-// }
-// const obj1 = m2(1, 3);
-// const obj2 = m2(2, 3);
-// global.console.log(obj1 === obj2);
-// global.console.log(obj1 instanceof m2);
-
+function factries(name, age) {
+  return {
+    name,
+    age,
+  };
+}
+global.console.log(factries('baimei', 99));
 /* 构造函数模式 */
-function M2(x, y) {
-  this.x = x * x;
-  this.y = y * y;
-}
-// const obj1 = new M2(1, 3);
-// const obj2 = new M2(2, 3);
-// global.console.log(obj1 === obj2);
-// global.console.log(obj2 instanceof M2);
-
-/*  借用继承 借用构造函数 只继承了父类的属性 */
 /**
- *
- * @param {Number} x
- * @param {Number} y
- * @param {Number} z
-//  */
-// function M3(x, y, z) {
-//   M2.call(this, x, y);
-//   this.z = z * z * z;
-// }
-// const obj1 = new M3(1, 3, 4);
-// const obj2 = new M3(2, 3, 4);
-// global.console.log(obj1);
-// global.console.log(obj2 instanceof M2);
-// global.console.log(obj2 instanceof M3);
-
-/* 寄生继承 创建了一个父类实例 继承了属性以及方法 */
-function M3(x, y, z) {
-  const prrent = new M2(x, y);
-  prrent.z = z * z * z;
-  return prrent;
+ * 生成的实例可以使用 instance操作符 和 实例的constructor属性 区分类别  抽象出了事务具体的类别
+ * 所有的实例以及方法都必须写在构造函数内，所有实例都有各自的功能相同的方法，没有抽离出公共部分以节省内存
+ */
+function Persion(name, age) {
+  this.name = name;
+  this.age = age;
 }
-const obj1 = new M3(1, 3, 4);
-const obj2 = new M3(2, 3, 4);
-global.console.log(obj1);
-global.console.log(obj2 instanceof M2);
-global.console.log(obj2 instanceof M3);
+global.console.log(new Persion('baimei', 99));
+/*  借用继承  */
+/**
+ * 通过借用构造函数实现了属性与方法的继承
+ * 节省了代码量 同样没有抽离出共同的属性与方法以节省内存
+ */
+function Borrow(name, age, address) {
+  Persion.call(this, name, age);
+  this.address = address;
+}
+global.console.log(new Borrow('baimei', 99, 'beijin'));
+
+/* 原型模式 */
+/**
+ * 利用原型链改写实现公共方法属性抽离 所有实例共享公共方法及属性
+ */
+function Prototype(name, age, address) {
+  Persion.call(this, name, age);
+  this.address = address;
+}
+Prototype.prototype.sayName = function () {
+  global.console.log(this.name);
+};
+/* 寄生模式 */
+/**
+ * 利用原型模式 子类实例可以继承父类的原型上的公共方法及属性
+ * 与借用构造函数混合使用时 要调用两次父类构造函数
+ * 子类实例中的属性会与子类原型中的属性重复
+ */
+function parasitism(ParrentClass) {
+  function F() {}
+  F.prototype = new ParrentClass('baimei', 99, 'beijin');
+  F.prototype.constructor = F;
+  return new F();
+}
+global.console.log(parasitism(Borrow).address);
