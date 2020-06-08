@@ -11,7 +11,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}/es6-es7/extenstion.js"
+      "program": "${workspaceFolder}/js/typeTRansform.js"
     }
   ]
 }
