@@ -1,5 +1,3 @@
-var decLiteral = 6;
-var hexLiteral = 0xf00d;
-var binaryLiteral = 10;
-var octalLiteral = 484;
-console.log(decLiteral == hexLiteral);
+const decLiteral = 6;
+const hexLiteral = 0xf00d;
+global.console.log(decLiteral === hexLiteral);

@@ -1,12 +1,12 @@
 export default () => {
-    console.log('default')
-}
+  global.console.log('default');
+};
 
-const a = 1
-const b  = 2
+const a = 1;
+const b = 2;
 
 export {
-    a, b
-}
+  a, b,
+};
 
-export const c = 3
+export const c = 3;
