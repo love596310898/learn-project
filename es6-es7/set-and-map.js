@@ -1,5 +1,11 @@
 /**
- * * 测试 Set Map类型 不能直接使用rest操作符，Set Map 内置有迭代器，迭代器可以使用rest操作符，因此可以变相使用rest操作符
+ * set所有成员不重复 重复的判断是===运算  NaN例外 在set中NaN与自身相等
+ * set实例基础方法 add（增加） 、delet（删除） 、has（是否存在） 、clear（清空）
  */
 const set = new Set([1, 2]);
-global.console.log(Object.entries(set));
+set.add(3);
+global.console.log(set);
+set.add(3);
+global.console.log(set);
+set.delete(2);
+global.console.log({ ...set });
