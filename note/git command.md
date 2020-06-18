@@ -2,12 +2,14 @@
 # git commid note
 
 ``` javascript
+git commit --amend //追加至上次提交
 git checkout  -b  branchName   remoteName/branchName // 拉取远程分支并创建本地分支与其建立映射关系
 git push remoteName  remoteBranchName // 推送本地分支到远程
 git push --set-upstream  remoteName  remoteBranchName // 推送本地分支到远程并关联此分支
 git push --delete remoteName  branchName // 删除远程分支
 git rm  fileName  // 删除本地文件
 git rm --cached  fileName  //取消git对文件的跟踪  本地文件仍然保留
+git mv oldFileName newFileName // git对大小写不敏感 修改名称时如果只是大小写变化，使用此命令（其利用临时文件来完成重命名）
 git restore  fileName // 撤销文件在工作区的修改
 git restore --worktree // 撤销工作区全部修改
 git restore --staged  fileName // 撤销文件暂存
