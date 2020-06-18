@@ -22,8 +22,15 @@ git remote add  remoteName  remoteUrl  // 添加一个远程仓库
 git remote rm remoteName  // 删除一个远程库
 git stash // 存入工作区的修改（可多次存入）
 git stash pop // 取出存入的修改（可指定取出某一次存入）
-git marge  branchName // 合并当前分支与指定分支（pull会执行marge操作）
-git rebase  banchName // 当前分支变基到指定分支（类似与marge，当前分支最终生成的结果一致，历史记录不一致）（注意：存在远程分支的情况下切勿操作变基）
 git reset HEAD^ // 分支回退到上一次commit版本
 git reset headId //  分支回退到指定id的commit版本
+git marge  branchName // 合并当前分支与指定分支（pull会执行marge操作）
+git rebase  banchName
+/**
+ * 将当前分支变基到指定分支（ pull --rebase会执行变基操作）
+ * 变基操作相当于丢弃当前分支的提交，将其合并到指定分支生成新的提交记录，并将其设置为当前分支的基础
+ * 指定分支在执行marge命令，快进到变基产生的提交记录，至此两个分支完全相同
+ * ！！！切记（永远不要在存在副本的分支执行变基操作）
+ */
+git rebase --onto targetBranch baseBranch sourceBranch // 将源分支与基础分支之间的校验和提交到目标分支
 ```

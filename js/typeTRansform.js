@@ -1,9 +1,9 @@
 /* 引用类型向基础类型转换 */
 /**
  * 在数学运算，逻辑运算中使用引用类型，会执行从引用类型向基础类型的转换
- * 期望是Boolen的地方 除了null 都转换为true
+ * 期望是Boolen的地方 都转换为true
  * 期望是String的地方 会调用对象的toString方法，如果返回的值如果还是一个引用类型，则继续调用这个值的toString方法，直到返回基础类型
- * 期望是Number的地方 会调用对象的valueOf方法，如果返回一个引用类型的值，则继续调用这个的toString方法，直到返回基础类型
+ * 期望是Number的地方 会调用对象的valueOf方法，如果返回一个引用类型的值，则继续调用这个值的toString方法，直到返回基础类型
  */
 /* Date */
 /**
@@ -36,6 +36,7 @@ function toOriginal(o) {
   global.console.log(o.toString && o.toString());
   global.console.log(o.valueOf && o.valueOf());
   global.console.log(o.toJSON && o.toJSON());
+  global.console.log(o);
   global.console.log(1 + o);
   global.console.log(1 - o);
   global.console.log('\n');
