@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>websocket</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+<button id="connected" onclick="socket.send('用户?1')">页面2</button>
+
+<script type="text/javascript">
+
+    var onOpen = function() {
+            console.log("Socket opened.");
+        },
+        onClose = function() {
+            console.log("Socket closed.");
+        },
+        onMessage = function(ev) {
+            alert("We get signal:" + ev.data );
+        },
+        onError = function() {
+            console.log("We got an error.");
+        },
+
+        socket = new WebSocket("ws://127.0.0.1:8080/?uid=2");
+    socket.onopen = onOpen;
+    socket.onclose = onClose;
+    socket.onerror = onError;
+    socket.onmessage = onMessage;
+</script>
+</body>
+</html>
