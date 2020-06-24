@@ -27,12 +27,12 @@
  * valueOf返回数组自身
  */
 const date = new Date();
-const fn = function () {};
-const obj = {};
-const arr = [];
+const fn = function () { console.log('1111'); };
+const obj = { a: 1 };
+const arr = [1, 2];
 
 function toOriginal(o) {
-  global.console.log(typeof o);
+  global.console.log(Object.prototype.toString.call(o));
   global.console.log(o.toString && o.toString());
   global.console.log(o.valueOf && o.valueOf());
   global.console.log(o.toJSON && o.toJSON());
