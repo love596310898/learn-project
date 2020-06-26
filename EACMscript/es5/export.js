@@ -1,5 +1,5 @@
 export default () => {
-  global.console.log('default');
+  console.log(this);
 };
 
 const a = 1;
