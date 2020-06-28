@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * es6 模块化规范
  * 默认暴露 export default = something
@@ -11,6 +12,11 @@
  * es模块在导出后 模块内部的变化可以反应到已导出的模块对象上，说明es直接导出了模块对象而非副本
  * 由于es模块暴露的是模块对象本身，对模块暴露值得操作都会影响到其他模块内对值的引用
  */
+=======
+export default () => {
+  console.log(this);
+};
+>>>>>>> 892551e264ffe7fa535e68ebc31da9970c486e60
 
 // export.js
 export const conter = { a: 1 };
