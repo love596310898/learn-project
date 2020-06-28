@@ -11,7 +11,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}/js/typeTRansform.js"
+      "program": "${workspaceFolder}/EACMscript/modularization/require2.js"
     }
   ]
 }
