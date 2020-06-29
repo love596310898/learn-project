@@ -11,7 +11,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}/EACMscript/modularization/require2.js"
+      "program": "${workspaceFolder}/EACMscript/es5/extenstion.js"
     }
   ]
 }

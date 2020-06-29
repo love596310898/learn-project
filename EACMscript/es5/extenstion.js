@@ -8,7 +8,7 @@ function factries(name, age) {
     age,
   };
 }
-global.console.log(factries('baimei', 99));
+console.log(factries('baimei', 99));
 /* 构造函数模式 */
 /**
  * 生成的实例可以使用 instance操作符 和 实例的constructor属性 区分类别  抽象出了事务具体的类别
@@ -18,7 +18,7 @@ function Persion(name, age) {
   this.name = name;
   this.age = age;
 }
-global.console.log(new Persion('baimei', 99));
+console.log(new Persion('baimei', 99));
 /*  借用构造函数 */
 /**
  * 通过借用构造函数实现了属性与方法的继承
@@ -28,7 +28,7 @@ function Borrow(name, age, address) {
   Persion.call(this, name, age);
   this.address = address;
 }
-global.console.log(new Borrow('baimei', 99, 'beijin'));
+console.log(new Borrow('baimei', 99, 'beijin'));
 
 /* 原型模式 */
 /**
@@ -39,7 +39,7 @@ function Prototype(name, age, address) {
   this.address = address;
 }
 Prototype.prototype.sayName = function () {
-  global.console.log(this.name);
+  console.log(this.name);
 };
 /* 寄生模式 */
 /**
@@ -53,7 +53,7 @@ function parasitism(ParrentClass) {
   F.prototype.constructor = F;
   return new F();
 }
-global.console.log(parasitism(Borrow).address);
+console.log(parasitism(Borrow).address);
 /* 优化寄生模式 配合原型模式  借用构造函数 实现的组合继承 */
 /**
  * 类似Object.create()方法实现 实现对象间的继承
@@ -77,4 +77,4 @@ function OptimizeParasitism(...args) {
 prototype.constructor = OptimizeParasitism;
 OptimizeParasitism.prototype = prototype;
 const obj = new OptimizeParasitism('baimei', 99, 'beijin');
-global.console.log(obj);
+console.log(obj);
