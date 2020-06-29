@@ -4,7 +4,7 @@
  * set类部署了interator接口 可使用keys 、 values、 entries 获取迭代器  也可使用forEach 直接迭代
  * set由于存在interator接口 所以可直接使用for of循环
  * set展开到{..set}中是进行枚举操作，由于set类原生不具有任何可枚举的自有属性，所以相当于展开一个空对象{}
- * set展开到[...set]中式进行迭代操作，展开的是set包含的数据成员
+ * set展开到[...set]中是进行迭代操作，展开的是set包含的数据成员
  */
 const set = new Set([1, 2]);
 const keys = Object.keys(set);
