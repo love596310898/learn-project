@@ -1,4 +1,5 @@
 /**
+ * map
  * map所有成员不重复 重复的判断是===运算  NaN例外 在map中NaN与自身相等
  * map实例基础方法 add（增加） 、delet（删除） 、has（是否存在） 、clear（清空）
  * map类部署了interator接口 可使用keys 、 values、 entries 获取迭代器  也可使用forEach 直接迭代

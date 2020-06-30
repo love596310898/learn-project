@@ -17,10 +17,7 @@ module.exports = {
     parser: 'babel-eslint',
   },
   rules: {
-    // https://eslint.org/docs/rules/
-    // https://eslint.org/docs/user-guide/configuring#extending-configuration-files
-    // 'no-console': NODE_ENV === NODE_ENV_PROD ? 'warn' : 'off',
-    // 'no-debugger': NODE_ENV === NODE_ENV_PROD ? 'warn' : 'off',
+    "max-classes-per-file": ["off"],
     "no-console": "off",
     'max-len': ['error', 200],
     'consistent-return': ['off'],
@@ -29,7 +26,6 @@ module.exports = {
     'import/no-extraneous-dependencies': ['off'],
     'func-names': ['off'],
     'linebreak-style': ['off'],
-    // https://eslint.vuejs.org/rules/#uncategorized
     'vue/comma-dangle': ['error', 'always-multiline'],
     'vue/key-spacing': ['error', {
       mode: 'strict',

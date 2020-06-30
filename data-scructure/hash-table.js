@@ -9,20 +9,21 @@ class Table {
   constructor(size) {
     this.cells = new Array(size);
   }
+
   hash(key) {
     let total = 0;
-    for (let i = 0; i < key.length;i++) {
+    for (let i = 0; i < key.length; i += 1) {
       total += key.charCodeAt(i);
     }
     return total % this.cells.length;
   }
+
   insert(key, value) {
     const hash = this.hash(key);
-    console.log(hash)
+    console.log(hash);
     if (!this.cells[hash]) {
       this.cells[hash] = new Node(key, value);
-    }
-    else if (this.cells[hash].key === key) {
+    } else if (this.cells[hash].key === key) {
       this.cells[hash].value = value;
     } else {
       let node = this.cells[hash];
@@ -36,21 +37,22 @@ class Table {
       node.next = new Node(key, value);
     }
   }
+
   get(key) {
     const hash = this.hash(key);
     if (!this.cells[hash]) return null;
-    else {
-      let node = this.cells[hash];
-      while (node) {
-        if (node.key === key) return node.value;
-        node = node.next;
-      }
-      return null;
+
+    let node = this.cells[hash];
+    while (node) {
+      if (node.key === key) return node.value;
+      node = node.next;
     }
+    return null;
   }
+
   getAll() {
     const table = [];
-    for (let i = 0; i < this.cells.length; i++) {
+    for (let i = 0; i < this.cells.length; i += 1) {
       const cell = [];
       let node = this.cells[i];
       while (node) {
@@ -63,8 +65,8 @@ class Table {
   }
 }
 
-const table = new Table(100)
-table.insert('a', {birthday: '19890926'})
-table.insert('b', {birthday: '19890926'})
-table.insert('c', {birthday: '19890926'})
-console.log(table)
+const table = new Table(100);
+table.insert('a', { birthday: '19890926' });
+table.insert('b', { birthday: '19890926' });
+table.insert('c', { birthday: '19890926' });
+console.log(table);
