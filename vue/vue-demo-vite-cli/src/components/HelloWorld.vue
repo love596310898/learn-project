@@ -5,19 +5,12 @@
       count is: {{ count }}
     </button>
     <p>Edit <code>components/HelloWorld.vue</code> to test hot module replacement.</p>
-    <TextComponent />
   </div>
 </template>
 
 <script>
 export default {
   name: 'HelloWorld',
-  components: {
-    TextComponent: {
-      template: '<p>{{name}}</p>',
-      data: () => ({ name: 'p' }),
-    },
-  },
   props: {
     msg: {
       type: String,

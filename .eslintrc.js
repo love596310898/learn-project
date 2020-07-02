@@ -17,8 +17,8 @@ module.exports = {
     parser: 'babel-eslint',
   },
   rules: {
-    "max-classes-per-file": ["off"],
-    "no-console": "off",
+    'max-classes-per-file': ['off'],
+    'no-console': 'off',
     'max-len': ['error', 200],
     'consistent-return': ['off'],
     'import/extensions': ['off'],
