@@ -4,15 +4,16 @@
     <meta charset="utf-8">
     <title>special-effects</title>
     <style>
+      *{
+        padding: 0;
+        margin: 0;
+      }
       #wrap{
         height: 100vh;
-        position: relative;
-      }
-      #ul{
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
       }
       .special-effects-item{
         padding: 20px;
