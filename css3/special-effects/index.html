@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
-    <meta charset="uft-8">
+    <meta charset="utf-8">
     <title>special-effects</title>
     <style>
       #wrap{
@@ -30,24 +30,40 @@
     <script>
       (function(){
         const items = [];
+        const paths = [{
+          name: '3D旋转画册',
+          path: './photo-album-3d/index.html'
+        },{
+          name: '3D翻书效果',
+          path: './photo-book-3d/index.html'
+        },{
+          name: '创意告白',
+          path: './confession/index.html'
+        },{
+          name: '3D雨滴效果',
+          path: './canvas-raindrop-3d/index.html'
+        },{
+          name: '3D花瓣特效',
+          path: './canvas-petal/index.html'
+        },{
+          name: '怪物特效',
+          path: './monster/index.html'
+        }]
         const fragment = document.createDocumentFragment()
-      for(let i = 1; i < 14; i += 1) {
-        items.push({name: `special-effects${i}`, url: `./${i}/index.html`});
-      }
-      items.forEach( (i) => {
-        const li = document.createElement('li');
-        li.className = 'special-effects-item';
-        const a = document.createElement('a');
-        const textNode = document.createTextNode(i.name);
-        a.alt = i.name;
-        a.href = i.url;
-        a.target = '_blank';
-        a.appendChild(textNode);
-        li.appendChild(a);
-        fragment.appendChild(li);
-      })
-      const wrap = document.getElementById('ul');
-      wrap.appendChild(fragment)
+        paths.forEach( (i) => {
+          const li = document.createElement('li');
+          li.className = 'special-effects-item';
+          const a = document.createElement('a');
+          const textNode = document.createTextNode(i.name);
+          a.alt = i.name;
+          a.href = i.path;
+          a.target = '_blank';
+          a.appendChild(textNode);
+          li.appendChild(a);
+          fragment.appendChild(li);
+        })
+        const wrap = document.getElementById('ul');
+        wrap.appendChild(fragment)
       })()
     </script>
   </body>
