@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="uft-8">
+    <title>special-effects</title>
+    <style>
+      #wrap{
+        height: 100vh;
+        position: relative;
+      }
+      #ul{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+      }
+      .special-effects-item{
+        padding: 20px;
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <ul id="ul"></ul>
+    </div>
+    <script>
+      (function(){
+        const items = [];
+        const fragment = document.createDocumentFragment()
+      for(let i = 1; i < 14; i += 1) {
+        items.push({name: `special-effects${i}`, url: `./${i}/index.html`});
+      }
+      items.forEach( (i) => {
+        const li = document.createElement('li');
+        li.className = 'special-effects-item';
+        const a = document.createElement('a');
+        const textNode = document.createTextNode(i.name);
+        a.alt = i.name;
+        a.href = i.url;
+        a.target = '_blank';
+        a.appendChild(textNode);
+        li.appendChild(a);
+        fragment.appendChild(li);
+      })
+      const wrap = document.getElementById('ul');
+      wrap.appendChild(fragment)
+      })()
+    </script>
+  </body>
+</html>

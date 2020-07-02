@@ -1,7 +1,6 @@
 # scc3特效站点
 
 ``` javascript
-http://demo.itivy.com/html5-canvas-video/index.html
 
 http://www.html5tricks.com/demo/webgl-water/index.html
 
