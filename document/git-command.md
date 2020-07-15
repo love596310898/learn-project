@@ -3,7 +3,9 @@
 
 ``` javascript
 git commit --amend //追加至上次提交
-git checkout  -b  branchName   remoteName/branchName // 拉取远程分支并创建本地分支与其建立映射关系
+git checkout branchName //切换分支
+git checkout remoteBranchname // 在本地创建同名分支并切换到该分支，同时与其建立追踪关系
+git checkout  -b  branchName   remoteName/branchName // 创建本地分支并切换到该分支，同时设置远程的追踪分支
 git push remoteName  remoteBranchName // 推送本地分支到远程
 git push --set-upstream  remoteName  remoteBranchName // 推送本地分支到远程并关联此分支
 git push --delete remoteName  branchName // 删除远程分支
