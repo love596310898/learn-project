@@ -1,4 +1,4 @@
-const arr = [1, NaN, Infinity, -Infinity, 'string', true, undefined, null, {}, [], (function () { global.console.log(); }), new Set(), new Map()];
+const arr = [1, NaN, Infinity, -Infinity, 'string', true, undefined, null, {}, [], (function () { global.console.log(); }), new Set(), new Map(), Symbol('test')];
 
 const typeOfWay = () => {
   arr.forEach((i) => {
@@ -19,6 +19,7 @@ const typeOfWay = () => {
   * [Function] 'function'
   * Set {} 'object'
   * Map {} 'object'
+  * Symbol(test) 'symbol'
  */
 const toStringWay = () => {
   arr.forEach((i) => {
@@ -40,6 +41,7 @@ const toStringWay = () => {
  * [Function] '[object Function]'
  * Set {} '[object Set]'
  * Map {} '[object Map]'
+ * Symbol(test) '[object Symbol]'
  */
 typeOfWay();
 toStringWay();

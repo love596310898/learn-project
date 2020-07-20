@@ -10,6 +10,9 @@
   object.properytlsEnumerable(propertyName) // 判断指定属性是否可枚举
 
   object.isPrototypeOf(o)    // 判断当前对象是否是参数对象原型
+  // isPrototypeOf yu instenceOf 的区别
+  // 1、a.isPrototypeOf(b) 检查参数b是否在a的原型链上
+  // 2、a instanceOf b 检查 b的原型对象b.prototype 是否在a的原型链上
 ```
 
 # Object对象的方法及属性

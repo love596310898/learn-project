@@ -8,15 +8,21 @@
  * 接受第二个参数，类似与对数据库操作时的投影，只序列化/反序列化第二个参数指定的属性list
  */
 const obj = {
-  err: new Error('测试错误'),
-  reg: /\.\s/,
-  notFined: undefined,
   nan: NaN,
   max: Infinity,
   min: -Infinity,
+  reg: /\.\s/,
   date: new Date(),
-  other: '...',
-  arr: [new Error('测试错误'), /\.\s/, NaN, Infinity, -Infinity, new Date(), '...'],
+  err: new Error('测试错误'),
+  notDefined: undefined,
+  null: null,
+  string: '...',
+  number: 1,
+  boolen: true,
+  object: { property: 'object' },
+  array: ['elment', Symbol('symbol'), function () { console.log('function'); }, undefined],
+  symbol: Symbol('symbol'),
+  fun: function fun() { console.log('function'); },
 };
 Object.defineProperty(obj, 'intorate', {
   value: 'intorate',
