@@ -1,5 +1,5 @@
 // Symbol
-// symbol是javascript的第七种数据类型
+// symbol是javascript的第七种数据类型(基础类型)
 // smybol通过调用函数Symbol生成，其类似与字符串属于基础类型，故Symbol函数不能使用new操作符调用
 // Symbol函数调用时可以传递一个描述符用来描述当前smybol，如果参数是引用类型则调用toString方法转化为基础类型
 console.log(Symbol({}), Symbol(true), Symbol(1), Symbol(['element', {}]));
@@ -16,3 +16,27 @@ console.log(Boolean(Symbol('boolean'))); // 返回true
 console.log(typeof Symbol('instanceOf'), Object.prototype.toString.call(Symbol('instanceOf')));
 // symbol 使用JSON.stringify操作时, 处于对象中直接被忽略，处于数组中转换为null占位
 console.log(JSON.stringify({ sym: Symbol('inObject') }), JSON.stringify([Symbol('inArray')]));
+// symbol 作为key使用定义属性时，不能使用.运算符，在对象种使用symbol作为key也必须放在[]种
+// 因为.运算符后面key以及对象属性总是默认解释为字符串，而不是变量名所指向的symbol
+const keyOfSymbol = Symbol('key');
+const a = { [keyOfSymbol]: 'a' };
+const b = {};
+b[keyOfSymbol] = 'b';
+console.log(a[keyOfSymbol], b[keyOfSymbol]);
+
+// 常用例子
+
+const colorRed = Symbol('red');
+const colorGreen = Symbol('green');
+function getComplement(color) {
+  switch (color) {
+    case colorRed:
+      return colorGreen;
+    case colorGreen:
+      return colorRed;
+    default:
+      throw new Error('Undefined color');
+  }
+}
+
+console.log(getComplement(colorRed));
