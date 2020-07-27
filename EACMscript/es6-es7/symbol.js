@@ -25,7 +25,6 @@ b[keyOfSymbol] = 'b';
 console.log(a[keyOfSymbol], b[keyOfSymbol]);
 
 // 常用例子
-
 const colorRed = Symbol('red');
 const colorGreen = Symbol('green');
 function getComplement(color) {
@@ -38,5 +37,15 @@ function getComplement(color) {
       throw new Error('Undefined color');
   }
 }
-
 console.log(getComplement(colorRed));
+
+class MySearch {
+  constructor(value) {
+    this.value = value;
+  }
+
+  [Symbol.search](string) {
+    return string.indexOf(this.value);
+  }
+}
+console.log('foobar'.search(new MySearch('f')));
