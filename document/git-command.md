@@ -9,6 +9,8 @@ git checkout  -b  branchName   remoteName/branchName // 创建本地分支并切
 git push remoteName  remoteBranchName // 推送本地分支到远程
 git push --set-upstream  remoteName  remoteBranchName // 推送本地分支到远程并关联此分支
 git push --delete remoteName  branchName // 删除远程分支
+git log //查看提交记录日志
+git reflog // 查看全部提交记录日志
 git rm  fileName  // 删除本地文件
 git rm --cached  fileName  //取消git对文件的跟踪  本地文件仍然保留
 git mv oldFileName newFileName // git对大小写不敏感 修改名称时如果只是大小写变化，使用此命令（其利用临时文件来完成重命名）
