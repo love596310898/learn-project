@@ -18,3 +18,13 @@
 ## git版本控制工具
 
 1. 使用git管理自有demo、个人静态主站（love596310898.github.io）
+
+## codeRunner插件
+
+1. 利用vsCode插件codeRunner在ide内右键菜单直接运行代码，可通过codeRunner的setting.json配置执行code的解释器，和其他的管道命令
+2. 使用codeRunner配置ts-node执行ts代码，然后使用tsc命令编译ts代码，查看两者的区别，在学习typescript时特别有用
+
+## 通过node调试js和通过ts-node调试ts
+
+1. 利用vsCode自带的debug菜单选项调试js、ts
+2. 在debug菜单界面点击添加配置选项，生成配置文件，配置文件内可选择调试工具、以及需要被调试的代码文件路径或者应用程序的入口文件路径，然后执行程序进行断点调试
