@@ -28,6 +28,7 @@ module.exports = {
     'func-names': ['off'],
     'linebreak-style': ['off'],
     'vue/comma-dangle': ['error', 'always-multiline'],
+    "no-unused-vars": ["off", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
     'vue/key-spacing': ['error', {
       mode: 'strict',
       align: {

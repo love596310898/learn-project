@@ -2,6 +2,10 @@
 # git commid note
 
 ``` javascript
+git config --system --unset credential.helper // 清除window记录的凭证 远程仓库账号密码变更或者输入错误时 重新弹出账号密码输入框
+git config --local -l // 查看当前仓库本地配置
+git config --global -l // 查看当前windows用户全局配置
+git config --system -l // 查看git应用的系统配置
 git commit --amend //追加至上次提交
 git checkout branchName //切换分支
 git checkout remoteBranchname // 在本地创建同名分支并切换到该分支，同时与其建立追踪关系
@@ -9,7 +13,7 @@ git checkout  -b  branchName   remoteName/branchName // 创建本地分支并切
 git push remoteName  remoteBranchName // 推送本地分支到远程
 git push --set-upstream  remoteName  remoteBranchName // 推送本地分支到远程并关联此分支
 git push --delete remoteName  branchName // 删除远程分支
-git log //查看提交记录日志
+git log //查看提交记录日志++++
 git reflog // 查看全部提交记录日志
 git rm  fileName  // 删除本地文件
 git rm --cached  fileName  //取消git对文件的跟踪  本地文件仍然保留
