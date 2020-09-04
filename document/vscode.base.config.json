@@ -1,0 +1,55 @@
+{
+    "sync.gist": "3e17482d8f6acc64857fa267f46a5def",
+    "workbench.statusBar.visible": false,
+    "eslint.format.enable": true,
+    "files.associations": {
+        "*.cjson": "jsonc",
+        "*.wxss": "css",
+        "*.wxs": "javascript"
+    },
+    "emmet.includeLanguages": {
+        "wxml": "html"
+    },
+    "minapp-vscode.disableAutoConfig": true,
+    "eslint.options": {
+        "extensions": [
+          ".html",
+          ".js",
+          ".jsx",
+          ".vue"
+        ]
+      },
+      "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "html",
+        "vue"
+      ],
+      "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+      },
+      "files.autoSave": "off",
+      "eslint.trace.server": "messages",
+      "beautify.language": {
+        "html": [
+          "htm",
+          "html"
+        ],
+        "css": [
+          "css",
+          "scss"
+        ]
+      },
+      "vetur.format.defaultFormatterOptions": {
+        "js-beautify-html": {
+          "wrap_attributes": "force-expand-multiline"
+        },
+        "prettyhtml": {
+          "printWidth": 100,
+          "singleQuote": false,
+          "wrapAttributes": false,
+          "sortAttributes": false
+        }
+      },
+      "vetur.validation.template": false
+}
