@@ -1,55 +1,58 @@
 {
-    "sync.gist": "3e17482d8f6acc64857fa267f46a5def",
-    "workbench.statusBar.visible": false,
-    "eslint.format.enable": true,
-    "files.associations": {
-        "*.cjson": "jsonc",
-        "*.wxss": "css",
-        "*.wxs": "javascript"
+  "sync.gist": "3e17482d8f6acc64857fa267f46a5def",
+  "workbench.statusBar.visible": true,
+  "eslint.format.enable": true,
+  "files.associations": {
+    "*.cjson": "jsonc",
+    "*.wxss": "css",
+    "*.wxs": "javascript",
+    "*.json": "jsonc"
+  },
+  "emmet.includeLanguages": {
+      "wxml": "html"
+  },
+  "minapp-vscode.disableAutoConfig": true,
+  "eslint.options": {
+      "extensions": [
+        ".html",
+        ".js",
+        ".jsx",
+        ".vue"
+      ]
     },
-    "emmet.includeLanguages": {
-        "wxml": "html"
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "html",
+      "vue"
+    ],
+    // https://github.com/microsoft/vscode-eslint/issues/600#issuecomment-469211948
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
     },
-    "minapp-vscode.disableAutoConfig": true,
-    "eslint.options": {
-        "extensions": [
-          ".html",
-          ".js",
-          ".jsx",
-          ".vue"
-        ]
-      },
-      "eslint.validate": [
-        "javascript",
-        "javascriptreact",
-        "html",
-        "vue"
+    "files.autoSave": "off", // no fix on save with auto save on :-)
+    "eslint.trace.server": "messages",
+    // #region Beautify
+    "beautify.language": {
+      "html": [
+        "htm",
+        "html"
       ],
-      "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
+      "css": [
+        "css",
+        "scss"
+      ]
+    },
+    "vetur.format.defaultFormatterOptions": {
+      "js-beautify-html": {
+        "wrap_attributes": "force-expand-multiline"
       },
-      "files.autoSave": "off",
-      "eslint.trace.server": "messages",
-      "beautify.language": {
-        "html": [
-          "htm",
-          "html"
-        ],
-        "css": [
-          "css",
-          "scss"
-        ]
-      },
-      "vetur.format.defaultFormatterOptions": {
-        "js-beautify-html": {
-          "wrap_attributes": "force-expand-multiline"
-        },
-        "prettyhtml": {
-          "printWidth": 100,
-          "singleQuote": false,
-          "wrapAttributes": false,
-          "sortAttributes": false
-        }
-      },
-      "vetur.validation.template": false
+      "prettyhtml": {
+        "printWidth": 100,
+        "singleQuote": false,
+        "wrapAttributes": false,
+        "sortAttributes": false
+      }
+    },
+    "vetur.validation.template": false
 }

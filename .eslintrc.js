@@ -16,7 +16,7 @@ module.exports = {
     sourceType: 'module',
     parser: 'babel-eslint',
   },
-  "ignorePatterns": ["**/dist/**/*.js", "**/.vscode/*.js"],
+  ignorePatterns: ["**/dist/**/*.js", "**/.vscode/*.js", "**/vue/**/.js", "**/vue/**/.vue"],
   rules: {
     'max-classes-per-file': ['off'],
     'no-console': 'off',

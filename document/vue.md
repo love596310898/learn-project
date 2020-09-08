@@ -1,6 +1,6 @@
-# 编码规范
+# vue编码风格
 
-## naming rule
+## 项目命名规则
 
 ``` javascript
 /**
@@ -12,7 +12,7 @@
   */
 ```
 
-## vue tip
+## vue 注意事项
 
 ```javascript
 /**
@@ -37,10 +37,12 @@
  * /
 ```
 
-## data localiztion
+## vue模板插值
 
-```javascript
-/**
- * 接口数据全部本地化，以防止接口数据结构、类型、键名变化的时候，大量修改本地代码
- * /
+``` jsx
+<%= VALUE %> 用来做不转义插值；
+<%- VALUE %> 用来做 HTML 转义插值；
+<% expression %> 用来描述 JavaScript 流程控制。
+an example
+<link rel="icon" href="<%= BASE_URL %>favicon.ico">
 ```
