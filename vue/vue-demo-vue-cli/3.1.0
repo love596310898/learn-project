@@ -1,6 +1,0 @@
-
-> fibers@5.0.0 install E:\demos\learn project\vue\vue-demo-vue-cli\node_modules\fibers
-> node build.js || nodejs build.js
-
-
-E:\demos\learn project\vue\vue-demo-vue-cli\node_modules\fibers>if not defined npm_config_node_gyp (node "D:\Program Files\nodejs\node_modules\npm\node_modules\npm-lifecycle\node-gyp-bin\\..\..\node_modules\node-gyp\bin\node-gyp.js" rebuild --release )  else (node "D:\Program Files\nodejs\node_modules\npm\node_modules\node-gyp\bin\node-gyp.js" rebuild --release ) 
