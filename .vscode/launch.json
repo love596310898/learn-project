@@ -11,7 +11,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}/EACMscript/es6-es7/extansion.js"
+      "program": "${workspaceFolder}/typescript/src/class.ts"
     }
   ]
 }

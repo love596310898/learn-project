@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "this is typescript learn project",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsc -w"
   },
   "author": "596310898@163.com",
   "license": "ISC",

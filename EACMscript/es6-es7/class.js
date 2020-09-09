@@ -10,23 +10,21 @@
  * 将类的构造器或者构造函数当作普通函数直接调用时内部的new.target属性值是undefined，在类的构造器或者构造函数之外的使用new.target属性会报错
  */
 class ES6 {
-  // prop = 'prop' 当前无法定义继承属性，目前node环境下，使用=号赋值运算符报错
-  // static prop = 'prop' 同样也就无法定义静态属性
-  constructor() {
+  constructor() { // 类中的构造器中this指向类的实例对象
     console.log(new.target === ES6); // 在类的构造函数内 new.target 指向类自身
-    console.log(this); // 类中的构造器中this指向类的实例对象
+    this.name = 'es6'; // 定义实例属性
   }
 
-  callMe() { // 继承方法内部 this指向实例自身
+  prop = 'prop' // 定义实例属性 定义在返回的实例对象上
+
+  static state = '111111' // 类静态属性，定义在类的构造函数身上
+
+  callMe() { // 定义继承方法 定义在类的prototype对象上  this指向实例自身
     console.log(this, 'im a instance of es6 class');
   }
 
-  static callMe() { // 静态方法内部 this指向类自身
+  static callMe() { // 静态方法 定义在构造函数上 this指向类自身
     console.log(this, 'the static method of class is calling');
   }
 }
-// ES6(); // 直接调用会报错
-// ES6.callMe(); // 静态方法
-// const instance = new ES6();
-// instance.callMe(); //继承方法
-console.log(Reflect.getOwnPropertyDescriptor(ES6, 'callMe'), Reflect.getOwnPropertyDescriptor(ES6.prototype, 'callMe')); // 类中定义的静态方法与继承方法都是不可枚举的
+console.log(new ES6());

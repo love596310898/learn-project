@@ -2,7 +2,7 @@
 # git commid note
 
 ``` javascript
-git config --system --unset credential.helper // 清除window记录的凭证 远程仓库账号密码变更或者输入错误时 重新弹出账号密码输入框
+git config --system --unset credential.helper // 清除window记录的凭证 解决密码错误权限验证失败，重新弹出账号密码输入框，也可通过windows 控制面板>用户管理>凭据管理> 删除或者修改凭据
 git config --local -l // 查看当前仓库本地配置
 git config --global -l // 查看当前windows用户全局配置
 git config --system -l // 查看git应用的系统配置
