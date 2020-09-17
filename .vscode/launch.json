@@ -11,7 +11,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}/typescript/src/class.ts"
+      "program": "${workspaceFolder}/EACMscript/es5/Array.js"
     }
   ]
 }
