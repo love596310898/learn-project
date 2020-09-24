@@ -33,3 +33,5 @@
 - cls  清屏
 - exit cmd 窗口关闭
 - ipconfig /flushdns 清除dns缓存
+- get-ExecutionPolicy  查看运行脚本的权限  返回：Restricted（受限制的）  RemoteSigned（允许的）
+- Set-ExecutionPolicy -Scope CurrentUser 设置当前用户的允许脚本权限 输入：Restricted（受限制的）  RemoteSigned（允许的）

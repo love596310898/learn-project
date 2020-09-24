@@ -10,6 +10,7 @@ git commit --amend //追加至上次提交
 git checkout branchName //切换分支
 git checkout remoteBranchname // 在本地创建同名分支并切换到该分支，同时与其建立追踪关系
 git checkout  -b  branchName   remoteName/branchName // 创建本地分支并切换到该分支，同时设置远程的追踪分支
+git checkout hash filename // 将指定文件恢复到指定的版本
 git push remoteName  remoteBranchName // 推送本地分支到远程
 git push --set-upstream  remoteName  remoteBranchName // 推送本地分支到远程并关联此分支
 git push --delete remoteName  branchName // 删除远程分支
@@ -34,7 +35,7 @@ git stash // 存入工作区的修改（可多次存入）
 git stash pop // 取出存入的修改（可指定取出某一次存入）
 git reset HEAD^ // 分支回退到上一次commit版本
 git reset headId //  分支回退到指定id的commit版本
-git marge  branchName // 合并当前分支与指定分支（pull会执行marge操作）
+git merge  branchName // 合并当前分支与指定分支（pull会执行merge操作）
 git rebase  banchName
 /**
  * 将当前分支变基到指定分支（ pull --rebase会执行变基操作）
