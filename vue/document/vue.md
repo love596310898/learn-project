@@ -31,6 +31,7 @@
  * // 在vue编译器对自定义标签进行解析时，casename 不会被转义，从而匹配不到  case-name caseName CaseName 这三种注册方式任意一种
  * // 所以在Dom模板中 必须以 case-name 声明自定义标签，这种格式的标签会被vue编译器进行转义
  * // 能够匹配 case-name caseName CaseName 三种注册方式中任意一种
+ * // DOM模板使用场景 vue挂在元素在指定了elment挂载元素时 若挂载元素内部才能在DOM模板则会将其视为vue模板进行渲染
  * prop传递属性需要定义类型、设置默认值、是否必传、验证函数
  * 样式文件添加作用域scoped
  * 样式穿透使用::v-deep
