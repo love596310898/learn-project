@@ -8,8 +8,8 @@ const arr = ['elemente'];
 const obj = {};
 arr.testAttrOfArr = 'testAttrOfArr';
 Object.defineProperty(obj, 'testAttrOfObj', {
-	value: 'testAttrOfObj',
-	enumerable: false
+  value: 'testAttrOfObj',
+  enumerable: false,
 });
 const { toString, testAttrOfObj } = obj;
 const { testAttrOfArr, length } = arr;
@@ -17,7 +17,6 @@ const [element] = arr;
 global.console.log(toString);
 global.console.log(testAttrOfObj);
 global.console.log(testAttrOfArr, length, element, arr[0], arr['0']);
-debugger;
 const obj1 = { a: 1, b: 2 };
 
 const { a, b: b1, c = 3 } = obj1;

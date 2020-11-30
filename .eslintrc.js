@@ -18,29 +18,8 @@ module.exports = {
   },
   ignorePatterns: ["**/dist/**/*.js", "**/.vscode/*.js"],
   rules: {
-    'max-classes-per-file': ['off'],
     'no-console': 'off',
-    'max-len': ['error', 200],
-    'consistent-return': ['off'],
-    'import/extensions': ['off'],
-    'import/no-unresolved': ['off'],
-    'import/no-extraneous-dependencies': ['off'],
-    'func-names': ['off'],
-    'linebreak-style': ['off'],
-    'vue/comma-dangle': ['error', 'always-multiline'],
-    "no-unused-vars": ["off", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
-    'vue/key-spacing': ['error', {
-      mode: 'strict',
-      align: {
-        beforeColon: false,
-        afterColon: true,
-        on: 'colon',
-      },
-    }],
-    'vue/no-multi-spaces': ['error', {
-      ignoreProperties: true,
-    }],
-    'vue/eqeqeq': ['error', 'always'],
+    'linebreak-style': 'off',
   },
   overrides: [{
     files: [
