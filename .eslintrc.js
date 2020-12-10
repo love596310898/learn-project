@@ -20,6 +20,7 @@ module.exports = {
   rules: {
     'no-console': 'off',
     'linebreak-style': 'off',
+    "indent": ["error", 4],
   },
   overrides: [{
     files: [

@@ -6,7 +6,7 @@ export function downloadFile(data, fileName) {
     if (data instanceof Blob) {
         isBolb = true;
         url = window.URL.createObjectURL(data);
-    } else if (typeof data == 'string') {
+    } else if (typeof data === 'string') {
         // base64编码
         url = data;
     } else {
@@ -30,14 +30,13 @@ export function downloadFile(data, fileName) {
             window.navigator.msSaveBlob(data, fileName);
         } else {
             console.error(errMsg);
-            return;
         }
     }
 }
 
 export function downloadFileByUrl(url, fileName) {
     if (window.open instanceof Function) {
-        window.open(url, '_self')
+        window.open(url, '_self');
     } else {
         let tmpLink = document.createElement('a');
         if ('download' in tmpLink) {
@@ -55,3 +54,17 @@ export function downloadFileByUrl(url, fileName) {
         tmpLink = null;
     }
 }
+
+// 保存流文件
+export const saveStream = (blob, filename) => {
+    if ('msSaveOrOpenBlob' in window.navigator) {
+        navigator.msSaveBlob(blob, filename);
+    } else {
+        const a = document.createElement('a');
+        const url = window.URL.createObjectURL(blob);
+        a.href = url;
+        a.download = filename;
+        a.click();
+        window.URL.revokeObjectURL(url);
+    }
+};
