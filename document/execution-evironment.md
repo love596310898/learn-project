@@ -29,7 +29,7 @@
 /**
  * 本地对象是js引擎内部的js语言相关的实现
  * 比如web浏览器，它的内置对象有、Date、RegExp、Error、Math、Json、Url、setTimeout、setinteval、parseInt、parseFloat等···
- * 不同平台的js引擎的内置对象实现与行为基本一致，存在细微差别
+ * 不同平台的js引擎的本地对象实现与行为基本一致，存在细微差别
  * /
 ```
 
