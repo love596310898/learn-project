@@ -7,8 +7,18 @@ module.exports = {
   },
   // 扩展
   extends: ["plugin:prettier/recommended"],
-  // 忽略的文件夹
+  // 指定忽略的文件
   ignorePatterns: ["**/dist/**/*.js", "**/.vscode/*.js"],
   // 自定义规则
   rules: {},
+  // 指定处理的文件范围
+  overrides: [{
+    files: [
+      "**/__tests__/*.{j,t}s?(x)",
+      "**/tests/unit/**/*.spec.{j,t}s?(x)",
+    ],
+    env: {
+      mocha: true,
+    },
+  }],
 };
