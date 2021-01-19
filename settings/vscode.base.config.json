@@ -16,7 +16,7 @@
   // 工作区打开的文件状态栏默认显示
   "workbench.activityBar.visible": true,
   // 保存代码时自动格式化
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   // 自动格式化模式 - 修改过的文件
   "editor.formatOnSaveMode": "modifications",
   // 编辑器保存文件时启用eslint消除格式错误
@@ -26,7 +26,7 @@
   // 编辑器字体大小
   "editor.fontSize": 14,
   // vscode 窗口放大等级
-  "window.zoomLevel": 0.2,
+  "window.zoomLevel": 0,
   // 自动保存
   "files.autoSave": "off",
   // eslint 插件相关配置
@@ -34,8 +34,7 @@
   "eslint.options": {
     "extensions": [
       ".js",
-      ".jsx",
-      ".vue"
+      ".jsx"
     ]
   },
   "eslint.validate": [
@@ -48,25 +47,34 @@
   "eslint.trace.server": "messages",
   // vetur 插件相关配置
   "vetur.format.defaultFormatterOptions": {
-    "prettyhtml": {
-      "printWidth": 100,
-      "singleQuote": false,
+    "prettier": {
+      "printWidth": 200,
+      "singleQuote": true,
+      "tabWidth": 4,
+      "useTabs": false,
+      "semi": true,
+      "trailingComma": "none",
       "wrapAttributes": false,
       "sortAttributes": false
     }
   },
-  "vetur.validation.template": false,
+  "vetur.validation.template": true,
   "vetur.validation.script": false,
-  "vetur.validation.interpolation": false,
+  "vetur.validation.interpolation": true,
   "vetur.format.defaultFormatter.js": "none",
   "vetur.format.defaultFormatter.ts": "none",
+  "vetur.format.defaultFormatter.html": "prettier",
   // 不同文件配置对应的格式化插件
-  "html.format.enable": true,
-  "json.format.enable": true,
-  "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
   "[vue]": {
     "editor.defaultFormatter": "octref.vetur"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   }
 }
