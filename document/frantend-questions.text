@@ -2,16 +2,15 @@
 1、浏览器静态资源优化手段（js、css、image、离线网站）
 2、javascript标签type defer async 的区别, 有什么应用场景
 3、css 使用 link标签映入  与在样式表内使用@import引入有什么区别
-4、如何实现一个sso联合登录， 在soo登录的基础上如何实现单点登录（同域名/跨域名），（互斥的单点登录与互通的单点登录）
-5、websoket、webwork、svg、canvas、
-6、什么是option请求、option请求有什么作用
-7、put、post请求的区别
-8、原生的ajax请求分为几步、状态吗分别代表什么意思、如何终止pendding状态的请求、日常项目中使用的请求类库（axios、对于拦截器的使用、错误处理） 
-9、浏览器上下载文件应该怎么操作（a/window.open）加入使用ajax请求如何下载
-10、跨页签通讯、有几种方式
-11、link标签的rel属性 prefetch
-12、跨域、解决跨域, sesstionStorage  localstorage 区别
-13、如何优化资源加载 img与background使用图片有什么区别
+4、websoket、webwork、svg、canvas、
+5、什么是option请求、option请求有什么作用
+6、put、post请求的区别
+7、原生的ajax请求分为几步、状态吗分别代表什么意思、如何终止pendding状态的请求、日常项目中使用的请求类库（axios、对于拦截器的使用、错误处理） 
+8、浏览器上下载文件应该怎么操作（a/window.open）加入使用ajax请求如何下载
+9、跨页签通讯、有几种方式
+10、link标签的rel属性 prefetch
+11、跨域、解决跨域, sesstionStorage  localstorage 区别
+12、如何优化资源加载 img与background使用图片有什么区别
 
 css
 1、父元素高度不确定的情况下，如何确保子元素垂直居中
@@ -84,3 +83,4 @@ vuex
 7、使用字体图标时存在哪些兼容性问题、大量使用svg图标时有没有什么方便的使用方案（postcss）
 8、对于http站点升级https站点存在什么问题，前端需要处理什么问题
 9、如果要做一个三端响应式的站点，什么样的站点可以做三端响应式，如果做三端响应式需要具备什么样的条件
+10、如何实现一个sso的统一登录、如何实现一个互斥的单点登录
